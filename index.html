@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team France Members</title>
+
+    <style>
+        :root {
+            --bg-color: #fcfbfa; /* 温かみのあるオフホワイト */
+            --text-main: #1a1a1a;
+            --text-sub: #666666;
+            --accent: #2c3e50; /* フレンチライクなディープネイビー */
+            --border-color: #e5e5e5;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px 40px 20px;
+            border-bottom: 2px solid var(--text-main);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: var(--text-sub);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto 100px auto;
+            padding: 0 20px;
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: transparent;
+            /* AI特有の強いシャドウをやめ、洗練された境界線（または余白）で見せる */
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #eee;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%); /* ほんのりノスタルジックな質感に */
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.03);
+        }
+
+        .card-content h2 {
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin: 0 0 25px 0;
+            min-height: 50px; /* 高さを揃えてガタつきを防ぐ */
+        }
+
+        .profile-meta {
+            border-top: 1px dashed var(--border-color);
+            padding-top: 15px;
+        }
+
+        .meta-item {
+            display: flex;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+
+        .meta-label {
+            width: 70px;
+            color: #999;
+            font-weight: bold;
+        }
+
+        .meta-value {
+            color: var(--text-main);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* レスポンシブ対応（Gridによって自動最適化されるためシンプルに） */
+        @media (max-width: 600px) {
+            header {
+                padding: 50px 20px 30px 20px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Team France</h1>
+        <p>メンバー自己紹介プロフィール</p>
+    </header>
+
+    <div class="container">
+        <div class="members">
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="member1.jpg" alt="桑久保 陽平">
+                </div>
+                <div class="card-content">
+                    <h2>桑久保 陽平</h2>
+                    <p class="intro-text">最近はマイクラの整地にハマっています。</p>
+
+                    <div class="profile-meta">
+                        <div class="meta-item"><span class="meta-label">AGE</span><span class="meta-value">19歳</span></div>
+                        <div class="meta-item"><span class="meta-label">FROM</span><span class="meta-value">松戸 (千葉県)</span></div>
+                        <div class="meta-item"><span class="meta-label">HOBBY</span><span class="meta-value">マイクラ</span></div>
+                        <div class="meta-item"><span class="meta-label">ROLE</span><span class="meta-value">マップ制作</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="member2.jpg" alt="土屋 響輝">
+                </div>
+                <div class="card-content">
+                    <h2>土屋 響輝</h2>
+                    <p class="intro-text">フランス優勝します！</p>
+
+                    <div class="profile-meta">
+                        <div class="meta-item"><span class="meta-label">AGE</span><span class="meta-value">19歳</span></div>
+                        <div class="meta-item"><span class="meta-label">FROM</span><span class="meta-value">日本</span></div>
+                        <div class="meta-item"><span class="meta-label">HOBBY</span><span class="meta-value">サッカー観戦</span></div>
+                        <div class="meta-item"><span class="meta-label">ROLE</span><span class="meta-value">発表</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="member3.jpg" alt="岩田 知機">
+                </div>
+                <div class="card-content">
+                    <h2>岩田 知機</h2>
+                    <p class="intro-text">仕事チキンとやります！</p>
+
+                    <div class="profile-meta">
+                        <div class="meta-item"><span class="meta-label">AGE</span><span class="meta-value">20歳</span></div>
+                        <div class="meta-item"><span class="meta-label">FROM</span><span class="meta-value">カントー</span></div>
+                        <div class="meta-item"><span class="meta-label">HOBBY</span><span class="meta-value">推し活</span></div>
+                        <div class="meta-item"><span class="meta-label">ROLE</span><span class="meta-value">データ収集</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Team Profile</p>
+    </footer>
+
+</body>
+</html>
